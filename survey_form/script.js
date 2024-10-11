@@ -20,6 +20,7 @@ let scores = {
 
 function displayQuestion() {
     document.getElementById('question').textContent = questions[currentQuestion];
+    resetOptions();
 }
 
 function selectOption(option) {
@@ -31,6 +32,12 @@ function selectOption(option) {
     } else {
         scores.kinestetik += score;
     }
+
+    const selectedButton = document.querySelector(`.option:nth-child(${option})`);
+    selectedButton.classList.add('selected');
+    setTimeout(() => {
+        nextQuestion();
+    }, 1000);
 }
 
 function nextQuestion() {
@@ -67,6 +74,13 @@ function showResult() {
                     Skor Auditori: ${scores.auditori}<br>
                     Skor Visual: ${scores.visual}<br>
                     Skor Kinestetik: ${scores.kinestetik}`;
+}
+
+function resetOptions() {
+    const optionButtons = document.querySelectorAll('.option');
+    optionButtons.forEach(button => {
+        button.classList.remove('selected');
+    });
 }
 
 displayQuestion();
