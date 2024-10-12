@@ -67,6 +67,7 @@ function showResult() {
     const nextBtn = document.getElementById('nextBtn');
     const result = document.getElementById('result');
     const feedbackForm = document.getElementById('feedbackForm');
+    const chartContainer = document.getElementById('chartContainer');
 
     quiz.style.display = 'none';
     nextBtn.style.display = 'none';
@@ -98,7 +99,44 @@ function showResult() {
         <p>Tanggal tes: ${new Date().toLocaleDateString()}</p>
     `;
 
+    chartContainer.style.display = 'block';
+    createRadarChart();
+
     feedbackForm.style.display = 'block';
+}
+
+function createRadarChart() {
+    const ctx = document.getElementById('radarChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'radar',
+        data: {
+            labels: ['Auditori', 'Visual', 'Kinestetik'],
+            datasets: [{
+                label: 'Skor Gaya Belajar',
+                data: [scores.auditori, scores.visual, scores.kinestetik],
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgb(255, 99, 132)',
+                pointBackgroundColor: 'rgb(255, 99, 132)',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: 'rgb(255, 99, 132)'
+            }]
+        },
+        options: {
+            elements: {
+                line: {
+                    borderWidth: 3
+                }
+            },
+            scale: {
+                ticks: {
+                    beginAtZero: true,
+                    max: 20,
+                    stepSize: 5
+                }
+            }
+        }
+    });
 }
 
 document.getElementById('form').addEventListener('submit', function(event) {

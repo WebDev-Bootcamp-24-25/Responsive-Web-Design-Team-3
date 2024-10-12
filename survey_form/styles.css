@@ -1,9 +1,8 @@
 html, body {
     margin: 0;
     padding: 0;
-    min-height: 100%;
-    min-width: 100%;
-    overflow-x: hidden;
+    height: 100%;
+    overflow: hidden;
 }
 
 body {
@@ -13,11 +12,9 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     box-sizing: border-box;
 }
 
@@ -28,7 +25,8 @@ body {
     max-width: 600px;
     width: 90%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    margin: 20px auto;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 h1 {
@@ -147,16 +145,19 @@ h1 {
     color: #4ecdc4;
 }
 
+#chartContainer {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
 @media (max-width: 480px) {
     .option {
         flex: 1 0 100%;
-    }
-    
-    body {
-        padding: 10px;
     }
     
     .container {
         width: 95%;
         padding: 20px;
     }
+}
