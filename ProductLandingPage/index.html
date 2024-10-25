@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShoePrime - Premium Footwear Store</title>
+    <title>ShoePrime - Premium Footwear</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#">ShoePrime</a>
+                <a class="navbar-brand" href="#"><img src="https://via.placeholder.com/150x50?text=ShoePrime" alt="ShoePrime Logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -22,13 +22,13 @@
                             <a class="nav-link" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#products">Products</a>
+                            <a class="nav-link" href="#featured">Featured</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#collection">Collection</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -39,43 +39,50 @@
     <main>
         <section id="home" class="hero">
             <div class="container">
-                <h1>Welcome to ShoePrime</h1>
-                <p>Discover our premium footwear collection</p>
-                <a href="#products" class="btn btn-primary">Shop Now</a>
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1>Step into Style</h1>
+                        <p>Discover our premium collection of handcrafted shoes designed for comfort and elegance.</p>
+                        <a href="#featured" class="btn btn-primary btn-lg">Shop Now</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="https://via.placeholder.com/600x400?text=Premium+Shoes" alt="Premium Shoes" class="img-fluid rounded shadow">
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="products" class="py-5">
+        <section id="featured" class="py-5">
             <div class="container">
-                <h2 class="text-center mb-4">Our Products</h2>
+                <h2 class="text-center mb-5">Featured Products</h2>
                 <div class="row">
                     <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Shoe 1">
+                        <div class="card product-card">
+                            <img src="https://via.placeholder.com/300x200?text=Classic+Sneaker" class="card-img-top" alt="Classic Sneaker">
                             <div class="card-body">
                                 <h5 class="card-title">Classic Sneaker</h5>
-                                <p class="card-text">Comfortable and stylish sneaker for everyday wear.</p>
-                                <a href="#" class="btn btn-primary">Buy Now</a>
+                                <p class="card-text">Timeless design meets modern comfort.</p>
+                                <a href="#" class="btn btn-outline-primary">View Details</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Shoe 2">
+                        <div class="card product-card">
+                            <img src="https://via.placeholder.com/300x200?text=Elegant+Heel" class="card-img-top" alt="Elegant Heel">
                             <div class="card-body">
                                 <h5 class="card-title">Elegant Heel</h5>
-                                <p class="card-text">Sophisticated heel for special occasions.</p>
-                                <a href="#" class="btn btn-primary">Buy Now</a>
+                                <p class="card-text">Sophistication for any occasion.</p>
+                                <a href="#" class="btn btn-outline-primary">View Details</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Shoe 3">
+                        <div class="card product-card">
+                            <img src="https://via.placeholder.com/300x200?text=Sport+Runner" class="card-img-top" alt="Sport Runner">
                             <div class="card-body">
                                 <h5 class="card-title">Sport Runner</h5>
-                                <p class="card-text">High-performance running shoe for athletes.</p>
-                                <a href="#" class="btn btn-primary">Buy Now</a>
+                                <p class="card-text">Performance meets style.</p>
+                                <a href="#" class="btn btn-outline-primary">View Details</a>
                             </div>
                         </div>
                     </div>
@@ -83,42 +90,72 @@
             </div>
         </section>
 
-        <section id="about" class="py-5 bg-light">
+        <section id="collection" class="py-5 bg-light">
             <div class="container">
-                <h2 class="text-center mb-4">About Us</h2>
-                <p>ShoePrime is dedicated to providing high-quality footwear for all occasions. Our passion for shoes and commitment to customer satisfaction sets us apart in the industry.</p>
+                <h2 class="text-center mb-5">Our Collection</h2>
+                <div class="row">
+                    <div class="col-md-3 mb-4">
+                        <div class="category-card">
+                            <img src="https://via.placeholder.com/250x350?text=Men's" alt="Men's Collection" class="img-fluid rounded">
+                            <div class="category-overlay">
+                                <h3>Men's</h3>
+                                <a href="#" class="btn btn-light">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="category-card">
+                            <img src="https://via.placeholder.com/250x350?text=Women's" alt="Women's Collection" class="img-fluid rounded">
+                            <div class="category-overlay">
+                                <h3>Women's</h3>
+                                <a href="#" class="btn btn-light">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="category-card">
+                            <img src="https://via.placeholder.com/250x350?text=Kids" alt="Kids Collection" class="img-fluid rounded">
+                            <div class="category-overlay">
+                                <h3>Kids</h3>
+                                <a href="#" class="btn btn-light">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="category-card">
+                            <img src="https://via.placeholder.com/250x350?text=Accessories" alt="Accessories" class="img-fluid rounded">
+                            <div class="category-overlay">
+                                <h3>Accessories</h3>
+                                <a href="#" class="btn btn-light">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="contact" class="py-5">
+        <section id="about" class="py-5">
             <div class="container">
-                <h2 class="text-center mb-4">Contact Us</h2>
-                <form>
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" required>
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2>About ShoePrime</h2>
+                        <p>At ShoePrime, we believe that great shoes are the foundation of great style. Our passion for quality craftsmanship and innovative design drives us to create footwear that not only looks amazing but feels incredible too.</p>
+                        <p>With a focus on comfort, durability, and style, we strive to provide the best possible experience for our customers. Whether you're dressing up or dressing down, we've got the perfect shoes to match your unique personality.</p>
                     </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" required>
+                    <div class="col-lg-6">
+                        <img src="https://via.placeholder.com/600x400?text=About+ShoePrime" alt="About ShoePrime" class="img-fluid rounded shadow">
                     </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" rows="3" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send</button>
-                </form>
+                </div>
             </div>
         </section>
-    </main>
 
-    <footer class="bg-dark text-white py-3">
-        <div class="container text-center">
-            <p>&copy; 2024 ShoePrime. All rights reserved.</p>
-        </div>
-    </footer>
+        <footer class="bg-dark text-white py-3">
+            <div class="container text-center">
+                <p>&copy; 2024 ShoePrime. All rights reserved.</p>
+            </div>
+        </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="script.js"></script>
+    </body>
 </html>
